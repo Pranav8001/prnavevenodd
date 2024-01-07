@@ -1,0 +1,55 @@
+<html>
+<head> 
+<style>
+		*{font-size:40px;}
+		body{background-color:lightblue}
+</style>
+
+</head>
+
+<script>
+	function even()
+	{
+		event.preventDefault();
+		let num=document.getElementById("num");
+		let msg=document.getElementById("msg");	
+		let n= parseInt(num.value);
+		if(num.value=="")
+			{
+				alert("PLZ ENTER ANY NUMBER");
+				msg.innerHTML="";
+				num.focus();
+				return;
+			}
+			if(n<0)
+			{
+				alert("IT IS AN -VE NUMBER");
+				msg.innerHTML="";
+				num.focus();
+				return;
+			}
+		if(n%2==0)
+				msg.innerHTML="EVEN"
+		else
+				msg.innerHTML="ODD"
+	}
+</script>
+<body>
+		<center>
+			<div class ="nav">
+			<a href ="index.html">Home</a>
+			<a href ="about.html">About</a>
+			</div>
+				<h1> Even and Odd </h1>
+					<form onsubmit="even()">
+					<input type ="number" placeholder ="Enter a number" id ="num">
+					<br><br>
+					<input type ="submit" value="Find Even/Odd"/>
+					</form>
+				<h2 id="msg" />
+		</center>
+</body>
+
+
+
+</html>
